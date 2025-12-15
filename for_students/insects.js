@@ -54,7 +54,7 @@ export class GrButterfly extends GrObject{
             [1.95, 1.71], [1.91, 2.15], [2.17, 2.29], [2.31, 2.24], [2.57, 1.95]];
         let wing_curve = drawShape(wing_points);
         let wing_geom = new T.ExtrudeGeometry(wing_curve, { depth: 0.05, bevelEnabled: false });
-        let wing_map = params.color === "blue" ? tl.load("../textures/butterfly_blue.png") : tl.load("../textures/butterfly_orange.png");
+        let wing_map = params.color === "blue" ? tl.load("./textures/butterfly_blue.png") : tl.load("./textures/butterfly_orange.png");
         wing_map.wrapT = T.RepeatWrapping;
         wing_map.wrapS = T.RepeatWrapping;
 
