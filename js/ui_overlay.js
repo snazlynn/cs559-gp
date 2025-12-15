@@ -79,7 +79,7 @@ export class GrNetMechanicUI extends GrObject {
                 text_settings), text_mat);
             titleScreen.add(text);
             text.position.set(-2.5, 0.75, 0.25);
-            let toggle_string = `The net shadow can be enabled for extra aiming\nassistance. ${prototype ? `You can navigate to the \'texture display\'\npage if you\'d like to see the bugs with their custom\n meshes!` : `You can navigate to the \'prototype display\'\npage if you\'d like to see the bugs with just their\nprimitive meshes!`}`;
+            let toggle_string = `The net shadow can be enabled for extra aiming\nassistance. ${prototype ? `You can navigate to the \'texture display\'\npage if you\'d like to see the bugs with their custom\nmeshes!` : `You can navigate to the \'prototype display\'\npage if you\'d like to see the bugs with just their\nprimitive meshes!`}`;
             let text2 = new T.Mesh(new TextGeometry(toggle_string, 
                 text_settings), text_mat);
             text.add(text2);
