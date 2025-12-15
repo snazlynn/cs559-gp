@@ -2,7 +2,6 @@ import * as T from "../libs/CS559-Three/build/three.module.js";
 import { GrObject } from "../libs/CS559-Framework/GrObject.js";
 import { FontLoader } from "../libs/CS559-Three/examples/jsm/loaders/FontLoader.js";
 import { TextGeometry } from "../libs/CS559-Three/examples/jsm/geometries/TextGeometry.js";
-import { GrButterfly, GrSnail, GrCicada, GrBeetle } from "./insects_prototype.js";
 
 let prototype = document.getElementById("prototype") ? true : false;
 const bold_path = './libs/CS559-Three/examples/jsm/fonts/helvetiker_bold.typeface.json';
