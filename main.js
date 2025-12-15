@@ -4,8 +4,8 @@
 /**
  * bug catching game - main file
  */
-import * as T from "../libs/CS559-Three/build/three.module.js"; 
-import { GrWorld } from "../libs/CS559-Framework/GrWorld.js";
+import * as T from "./libs/CS559-Three/build/three.module.js"; 
+import { GrWorld } from "./libs/CS559-Framework/GrWorld.js";
 import { GrButterfly, GrSnail, GrCicada, GrBeetle, GrBee, GrSpider, GrWaterBug, GrMoth, GrFirefly } from "./insects.js";
 import { GrGround, GrNet, GrLog, GrRockBig, GrFlowerPatchOne, GrLight, GrPond } from "./background.js";
 import { GrNetMechanicUI, GrLOneDoneCtr, GrFleeMechanicUI, GrLTwoDoneCtr, GrLThreeDoneCtr } from "./ui_overlay.js";
