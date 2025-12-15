@@ -125,7 +125,7 @@ let garden_background = [
 let captured = 0;
 
 world.add(allUI[curUI]);
-let cur_level = 1;
+let cur_level = 0;
 let all_insects = [level_one_insects, level_two_insects, level_three_insects, garden_insects];
 let all_backgrounds = [level_one_background, level_two_background, level_three_background, garden_background];
 
