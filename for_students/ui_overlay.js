@@ -5,6 +5,9 @@ import { TextGeometry } from "../libs/CS559-Three/examples/jsm/geometries/TextGe
 import { GrButterfly, GrSnail, GrCicada, GrBeetle } from "./insects_prototype.js";
 
 let prototype = document.getElementById("prototype") ? true : false;
+const bold_path = './libs/CS559-Three/examples/jsm/fonts/helvetiker_bold.typeface.json';
+const reg_path = './libs/CS559-Three/examples/jsm/fonts/helvetiker_regular.typeface.json';
+const ital_path = './libs/CS559-Three/examples/jsm/fonts/helvetiker_italic.typeface.json';
 
 /**
  * makes all materials in mat_array invisible
@@ -53,7 +56,7 @@ export class GrNetMechanicUI extends GrObject {
         mat_array.push(text_mat);
 
         // bold
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_bold.typeface.json', (font) => {
+        loader.load(bold_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.2,
@@ -66,7 +69,7 @@ export class GrNetMechanicUI extends GrObject {
         });
 
         // regular
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_regular.typeface.json', (font) => {
+        loader.load(reg_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.15,
@@ -85,7 +88,7 @@ export class GrNetMechanicUI extends GrObject {
         });
 
         // italic
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_italic.typeface.json', (font) => {
+        loader.load(ital_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.125,
@@ -132,7 +135,7 @@ export class GrLOneDoneCtr extends GrObject {
         mat_array.push(text_mat);
 
         // bold
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_bold.typeface.json', (font) => {
+        loader.load(bold_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.2,
@@ -145,7 +148,7 @@ export class GrLOneDoneCtr extends GrObject {
         });
 
         // regular
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_regular.typeface.json', (font) => {
+        loader.load(reg_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.15,
@@ -163,7 +166,7 @@ export class GrLOneDoneCtr extends GrObject {
         });
 
         // italic
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_italic.typeface.json', (font) => {
+        loader.load(ital_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.125,
@@ -210,7 +213,7 @@ export class GrFleeMechanicUI extends GrObject {
         mat_array.push(text_mat);
 
         // bold
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_bold.typeface.json', (font) => {
+        loader.load(bold_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.2,
@@ -223,7 +226,7 @@ export class GrFleeMechanicUI extends GrObject {
         });
 
         // regular
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_regular.typeface.json', (font) => {
+        loader.load(reg_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.15,
@@ -241,7 +244,7 @@ export class GrFleeMechanicUI extends GrObject {
         });
 
         // italic
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_italic.typeface.json', (font) => {
+        loader.load(ital_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.125,
@@ -288,7 +291,7 @@ export class GrLTwoDoneCtr extends GrObject {
         mat_array.push(text_mat);
 
         // bold
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_bold.typeface.json', (font) => {
+        loader.load(bold_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.2,
@@ -301,7 +304,7 @@ export class GrLTwoDoneCtr extends GrObject {
         });
 
         // regular
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_regular.typeface.json', (font) => {
+        loader.load(reg_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.15,
@@ -319,7 +322,7 @@ export class GrLTwoDoneCtr extends GrObject {
         });
 
         // italic
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_italic.typeface.json', (font) => {
+        loader.load(ital_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.125,
@@ -366,7 +369,7 @@ export class GrLThreeDoneCtr extends GrObject {
         mat_array.push(text_mat);
 
         // bold
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_bold.typeface.json', (font) => {
+        loader.load(bold_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.2,
@@ -379,7 +382,7 @@ export class GrLThreeDoneCtr extends GrObject {
         });
 
         // regular
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_regular.typeface.json', (font) => {
+        loader.load(reg_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.15,
@@ -401,7 +404,7 @@ export class GrLThreeDoneCtr extends GrObject {
         });
 
         // italic
-        loader.load( '../libs/CS559-Three/examples/jsm/fonts/helvetiker_italic.typeface.json', (font) => {
+        loader.load(ital_path, (font) => {
             let text_settings = {
                 font: font,
                 size: 0.125,
