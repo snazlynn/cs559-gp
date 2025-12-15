@@ -4,14 +4,14 @@
 /**
  * bug catching game - main file
  */
-import * as T from "./libs/CS559-Three/build/three.module.js"; 
-import { GrWorld } from "./libs/CS559-Framework/GrWorld.js";
-import { GrButterfly, GrSnail, GrCicada, GrBeetle, GrBee, GrSpider, GrWaterBug, GrMoth, GrFirefly } from "./insects_prototype.js";
+import * as T from "../libs/CS559-Three/build/three.module.js"; 
+import { GrWorld } from "../libs/CS559-Framework/GrWorld.js";
+import { GrButterfly, GrSnail, GrCicada, GrBeetle, GrBee, GrSpider, GrWaterBug, GrMoth, GrFirefly } from "./insects.js";
 import { GrGround, GrNet, GrLog, GrRockBig, GrFlowerPatchOne, GrLight, GrPond } from "./background.js";
 import { GrNetMechanicUI, GrLOneDoneCtr, GrFleeMechanicUI, GrLTwoDoneCtr, GrLThreeDoneCtr } from "./ui_overlay.js";
 
 // CREATING OBJECTS //
-
+console.log("running main")
 // WORLD //
 let world = new GrWorld({
     width: 800,
@@ -125,7 +125,7 @@ let garden_background = [
 let captured = 0;
 
 world.add(allUI[curUI]);
-let cur_level = 1;
+let cur_level = 0;
 let all_insects = [level_one_insects, level_two_insects, level_three_insects, garden_insects];
 let all_backgrounds = [level_one_background, level_two_background, level_three_background, garden_background];
 
@@ -188,7 +188,7 @@ let prev_x = 0;
 let prev_y = 0;
 // GAME INTERACTION //
 window.addEventListener('mousemove', (event) => { // moving net
-    console.log(event.clientX, event.clientY);
+    // console.log(event.clientX, event.clientY);
     if(netActivated) {
         net.whole_ob.position.x = -8 + (17 * event.clientX) / (window.innerWidth);
         net.whole_ob.position.z = -3 + (9 * event.clientY) / (window.innerHeight);

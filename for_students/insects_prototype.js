@@ -1,5 +1,5 @@
-import * as T from "./libs/CS559-Three/build/three.module.js";
-import { GrObject } from "./libs/CS559-Framework/GrObject.js";
+import * as T from "../libs/CS559-Three/build/three.module.js";
+import { GrObject } from "../libs/CS559-Framework/GrObject.js";
 
 /**
  * creates three shape object from array of points
@@ -44,7 +44,6 @@ export class GrButterfly extends GrObject{
     constructor(params = {}) {
         let butterfly = new T.Group();
         let mat_array = [];
-        let tl = new T.TextureLoader();
         
         // WINGS //
         let wings = new T.Group();
@@ -54,12 +53,7 @@ export class GrButterfly extends GrObject{
             [1.95, 1.71], [1.91, 2.15], [2.17, 2.29], [2.31, 2.24], [2.57, 1.95]];
         let wing_curve = drawShape(wing_points);
         let wing_geom = new T.ExtrudeGeometry(wing_curve, { depth: 0.05, bevelEnabled: false });
-        let wing_map = params.color === "blue" ? tl.load("../textures/butterfly_blue.png") : tl.load("../textures/butterfly_orange.png");
-        wing_map.wrapT = T.RepeatWrapping;
-        wing_map.wrapS = T.RepeatWrapping;
-
-        let wing_mat = new T.MeshStandardMaterial({ color: params.color === "blue" ? 0x97bfed : 0xffc67a,
-            map: wing_map, transparent: true });
+        let wing_mat = new T.MeshStandardMaterial({ color: params.color === "blue" ? 0x4865c8 : 0xc87635, transparent: true });
         mat_array.push(wing_mat);
 
         // placement
@@ -277,6 +271,7 @@ export class GrSnail extends GrObject {
         // flee/return mechanic
         if(this.fleeing) {
             if(this.covered) {
+                console.log('time');
                 this.time_flee += delta/1000;
             }
             if(this.time_flee > 3) {
@@ -741,15 +736,10 @@ export class GrWaterBug extends GrObject {
     constructor(params = {}) {
         let water_bug = new T.Group();
         let mat_array = [];
-        let tl = new T.TextureLoader();
 
         // BODY //
         let body_geom = new T.SphereGeometry(0.45);
-        let body_map = tl.load("../textures/water_bug.png");
-        body_map.wrapT = T.RepeatWrapping;
-        body_map.wrapS = T.RepeatWrapping;
-
-        let body_mat = new T.MeshStandardMaterial({ color: 0xae6d2f, map: body_map });
+        let body_mat = new T.MeshStandardMaterial({ color: 0x5b3f28 });
         let body = new T.Mesh(body_geom, body_mat);
         water_bug.add(body);
         body.scale.set(1.5, 0.5, 1);
@@ -846,7 +836,6 @@ export class GrMoth extends GrObject {
     constructor(params = {}) {
         let moth = new T.Group();
         let mat_array = [];
-        let tl = new T.TextureLoader();
 
         // BODY //
         let body_geom = new T.SphereGeometry(0.25);
@@ -865,12 +854,9 @@ export class GrMoth extends GrObject {
             [2.67, 1.53], [2.85, 1.67], [2.96, 1.67], [2.89, 1.77], [2.89, 1.99], [3.13, 2.21], [3.32, 2.21], [3.47, 2.08]];
         let wing_curve = drawShape(wing_points);
         let wing_geom = new T.ExtrudeGeometry(wing_curve, { depth: 0.05, bevelEnabled: false });
-        
-        let wing_map = tl.load("../textures/moth.png");
-        wing_map.wrapT = T.RepeatWrapping;
-        wing_map.wrapS = T.RepeatWrapping;
-        let wing_mat = new T.MeshStandardMaterial({ color: 0xe1c19e, map: wing_map, transparent: true });
+        let wing_mat = new T.MeshStandardMaterial({ color: 0xb38a5f, transparent: true });
         mat_array.push({ object: wing_mat, opacity: wing_mat.opacity });
+        // mat_array.push(wing_mat);
         
         let wing1 = new T.Mesh(wing_geom, wing_mat);
         wings.add(wing1);
@@ -888,6 +874,8 @@ export class GrMoth extends GrObject {
         shadow.position.set(0, 0.1, 0);
         shadow.rotateX(Math.PI/2);
         
+        // moth.rotateX(-Math.PI/2);
+
         super(`Moth-${mothCtr++}`, moth);
         this.whole_ob = moth;
         this.wing_left = wing1;
