@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "webpack": "^5.103.0"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  }
+}
