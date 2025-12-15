@@ -6,7 +6,7 @@
  */
 import * as T from "../libs/CS559-Three/build/three.module.js"; 
 import { GrWorld } from "../libs/CS559-Framework/GrWorld.js";
-import { GrButterfly, GrSnail, GrCicada, GrBeetle, GrBee, GrSpider, GrWaterBug, GrMoth, GrFirefly } from "./insects.js";
+import { GrButterfly, GrSnail, GrCicada, GrBeetle, GrBee, GrSpider, GrWaterBug, GrMoth, GrFirefly } from "./insects_prototype.js";
 import { GrGround, GrNet, GrLog, GrRockBig, GrFlowerPatchOne, GrLight, GrPond } from "./background.js";
 import { GrNetMechanicUI, GrLOneDoneCtr, GrFleeMechanicUI, GrLTwoDoneCtr, GrLThreeDoneCtr } from "./ui_overlay.js";
 
@@ -125,7 +125,7 @@ let garden_background = [
 let captured = 0;
 
 world.add(allUI[curUI]);
-let cur_level = 0;
+let cur_level = 1;
 let all_insects = [level_one_insects, level_two_insects, level_three_insects, garden_insects];
 let all_backgrounds = [level_one_background, level_two_background, level_three_background, garden_background];
 
